@@ -42,6 +42,7 @@
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#skills" class="nav-link scrollto"><i class="bx  bx-x"></i> <span>Skills</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#githubRepos" class="nav-link scrollto"><i class="bx bxl-git"></i> <span>Github Repositories</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -51,12 +52,13 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Shradaya Ramtel</h1>
-      <p>I'm a <span class="typed" data-typed-items="Software Engineer Data, ML Enthusiast"></span></p>
+      <p>I'm a <span class="typed" data-typed-items="Data Engineer, ML Enthusiast, Software Engineer"></span></p>
       <div class="social-links">
+        <a href="https://github.com/Shradaya" class="github" target=”_blank”><i class="bx bxl-git"></i></a>
+        <a href="https://www.linkedin.com/in/shradaya-ramtel-9097a4148/" class="linkedin" target=”_blank”><i class="bx bxl-linkedin"></i></a>
         <a href="https://twitter.com/Shradayaramtel" class="twitter" target=”_blank”><i class="bx bxl-twitter"></i></a>
         <a href="https://www.facebook.com/rshradaya" class="facebook" target=”_blank”><i class="bx bxl-facebook"></i></a>
         <a href="https://www.instagram.com/shradayaramtel/" class="instagram" target=”_blank”><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/shradaya-ramtel-9097a4148/" class="linkedin" target=”_blank”><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -85,16 +87,15 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>14 Dec 1997</span></li>
                   <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+977 9863485345</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kathmandu, Nepal</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>Shradaya@hotmail.com</span></li>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
             </div>
@@ -184,7 +185,6 @@
               <p><em>Skilled Software Engineer with hands-on experience building, testing, optimizing data pipeline and warehouse for diverse industry organizations. Knowledgeable in identifying core Data problems and finding better solutions to existing problems. Capable of visualizing goals, prioritizing them based on general importance, and conquering them together with the team. Driven individual with the ability to adapt to any situation and proven potential to grow self and others.</em></p>
               <ul>
                 <li>Kathmandu, Nepal</li>
-                <li>+977 9863485345</li>
                 <li>Shradaya@hotmail.com</li>
               </ul>
             </div>
@@ -238,10 +238,17 @@
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End Resume Section -->
 
+    <section id="githubRepos" class="github">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Github Repositories</h2>
+        </div>
+        <div id = "repoList"></div>
+      </div>
+    </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -249,10 +256,11 @@
       <!-- <h3>Shradaya Ramtel</h3> -->
       <p>The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
       <div class="social-links">
+        <a href="https://github.com/Shradaya" class="github" target=”_blank”><i class="bx bxl-git"></i></a>
+        <a href="https://www.linkedin.com/in/shradaya-ramtel-9097a4148/" class="linkedin" target=”_blank”><i class="bx bxl-linkedin"></i></a>
         <a href="https://twitter.com/Shradayaramtel" class="twitter" target=”_blank”><i class="bx bxl-twitter"></i></a>
         <a href="https://www.facebook.com/rshradaya" class="facebook" target=”_blank”><i class="bx bxl-facebook"></i></a>
         <a href="https://www.instagram.com/shradayaramtel/" class="instagram" target=”_blank”><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/shradaya-ramtel-9097a4148/" class="linkedin" target=”_blank”><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>Shradaya Ramtel</span></strong>. All Rights Reserved
@@ -276,6 +284,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="assets/js/GitHubList.js"></script>
+  <!-- <script src="https://gitlist.himdek.com/GitHubList.js"></script> -->
+  <script>
+    listrepos("Shradaya", document.getElementById("repoList"), showProfile=true, showPagesHome=true).then(reposcount => {
+    // In this section, variable reposcount stores the total number of Repositories.
+    });
+  </script>
 
 </body>
 
