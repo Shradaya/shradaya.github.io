@@ -2,7 +2,7 @@ function listrepos(username, listelement, showProfile=false, showPagesHome=false
     return new Promise((resolve, reject) => {
       reposcount = 0;
       reposurl = "https://api.github.com/users/" + username + "/repos"
-      const reposToShow = ["Ecommerce-Django", "youtube_DW", "kedro-mlflow", "License_Plate_recognition", "sagemaker-cifar"]
+      const reposToShow = ["Ecommerce-Django", "youtube_DW", "kedro-mlflow", "License_Plate_recognition", "quiz_app_tkinter", "pipeline-dashboard"]
       fetch(reposurl).then(res => res.json()).then((out) => {
         var p = document.createElement("p");
         p.setAttribute("class", "sort");
